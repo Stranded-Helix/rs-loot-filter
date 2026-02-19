@@ -1,0 +1,180 @@
+/*@ define:module:header
+hidden: true
+name: header
+*/
+meta { name = "helix/test"; }
+
+
+
+/*@ define:module:general
+name: General options
+*/
+
+
+
+#define CONST_AREA_COX [3200, 5120, 0, 3391, 5759, 3]
+#define CONST_AREA_TOB [3136, 4224, 0, 3327, 4479, 3]
+#define CONST_AREA_TOA [3520, 5120, 0, 3967, 5439, 3]
+#define CONST_AREA_RAID(_) (area:CONST_AREA_COX || area:CONST_AREA_TOB || area:CONST_AREA_TOA)
+#define CONST_TAKEABLE(_) (accountType:0 || !ownership:2)
+
+/*@ define:input:ownership
+type: boolean
+group: Ownership filter
+label: 'Hide untakeable items (no effect if account is non-ironman)'
+*/
+#define VAR_OWNERSHIP_HIDEOTHER true
+
+/*@ define:input:ownership
+type: boolean
+group: Ownership filter
+label: 'Hide world spawns (ignores raids)'
+*/
+#define VAR_OWNERSHIP_HIDESPAWN false
+
+/*@ define:input:ownership
+type: stringlist
+group: Ownership filter
+label: Ignore ownership value for these items
+*/
+#define VAR_OWNERSHIP_IGNORE ["Dawnbringer"]
+
+rule (!CONST_TAKEABLE(0) && VAR_OWNERSHIP_HIDEOTHER && !name:VAR_OWNERSHIP_IGNORE) {
+  hidden = true;
+}
+
+rule (!CONST_AREA_RAID(0) && VAR_OWNERSHIP_HIDESPAWN && ownership:0 && !name:VAR_OWNERSHIP_IGNORE) {
+  hidden = true;
+}
+
+
+
+/*@ define:input:defaults
+type: style
+group: Default style
+label: Default style
+*/
+#define VAR_DEFAULTS_STYLE hidden = false;
+
+apply (true) { VAR_DEFAULTS_STYLE }
+
+apply (value:<1000) {
+	hideOverlay = true;
+	menuTextColor = "706555";
+	textAccent = 4;
+}
+
+rule (value:<3_000 && name:"coins") {
+	hideOverlay = true;
+}
+
+rule (name:"coins") {
+	color = "#efbf04";
+}
+
+
+#define CONST_AREA_DUSTDEVIL2 [1708,10011,0,1718,10035,0] // [[Catacombs of Kourend]]
+#define VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant axe","Rune dagger","Red d'hide vambraces","Black d'hide vambraces","Air battlestaff","Earth battlestaff"]
+
+#define CONST_AREA_EDGEVILLE_BANK [3091,3488,0,3098,3499,0] // [[Edgeville Bank]]
+
+apply ((area:CONST_AREA_DUSTDEVIL2) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>700)) {
+	color = "#6a5acd";
+}
+
+apply ((area:CONST_AREA_DUSTDEVIL2) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>10_000)) {
+	color = "#2e8b57";
+	icon = Sprite(41,0);
+}
+
+apply ((area:CONST_AREA_DUSTDEVIL2) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>20_000)) {
+	color = "#4682b4";
+	icon = Sprite(41,0);
+}
+
+
+//TESTING
+apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>700)) {
+	//color = "#6a5acd";
+	color = "#7C6CFF";
+	icon = Sprite(41,0);
+	textAccent = 2;
+	textAccentColor = "#363636";
+	menuSort = 1;
+	showDespawn = true;
+}
+
+apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>10_000)) {
+	//color = "#2e8b57";
+	color = "#2ECC71";
+	icon = Sprite(41,0);
+	textAccent = 2;
+	textAccentColor = "#363636";
+	menuSort = 2;
+	showDespawn = true;
+}
+
+apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>20_000)) {
+	//color = "#4682b4";
+	color = "#5DA9FF";
+	icon = Sprite(41,0);
+	textAccent = 2;
+	textAccentColor = "#363636";
+	menuSort = 3;
+	showDespawn = true;
+	notify = true;
+}
+
+//dark amber "#883000"
+
+apply (name:["Ancient shard","Dark totem *"]) {
+	hideOverlay = false;
+	textColor = "#000000";
+	textAccent = 3;
+	fontType = 3;
+	borderColor = "#000000";
+	backgroundColor = "#883000";
+	showLootBeam = true;
+	lootbeamColor = "#883000";
+	menuTextColor = "#883000";
+}
+
+//OVERRIDES
+apply (name:"* rune") {
+	color = "#95c8d8";
+	menuTextColor = "#95c8d8";
+}
+
+//Grimy Herbs are green
+apply (name:"grimy*") {
+	color = GREEN;
+	menuTextColor = GREEN;
+}
+
+
+apply (value:>100_000) {
+	textColor = "000000";
+	borderColor = "000000";
+	backgroundColor = "6C8EBF";
+	textAccent = 3;
+	menuTextColor = "000000";
+}
+
+apply (value:>500_000) {
+	textColor = "000000";
+	borderColor = "000000";
+	backgroundColor = "CFE9FF";
+	textAccent = 3;
+	showLootBeam = true;
+	lootbeamColor = "0041c2";
+	menuTextColor = "000000";
+}
+
+apply (value:>1_000_000) {
+	textColor = "ff0000";
+	borderColor = "ff0000";
+	backgroundColor = "ffffff";
+	textAccent = 3;
+	showLootBeam = true;
+	menuTextColor = "ff0000";
+}
