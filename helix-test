@@ -58,6 +58,18 @@ label: Default style
 
 apply (true) { VAR_DEFAULTS_STYLE }
 
+//Filter out Certain item types
+rule (name:"* rune") {
+	color = "#95c8d8";
+	menuTextColor = "#95c8d8";
+}
+
+//Grimy Herbs are green
+rule (name:"grimy*") {
+	color = GREEN;
+	menuTextColor = GREEN;
+}
+
 apply (value:<1000) {
 	hideOverlay = true;
 	menuTextColor = "706555";
@@ -140,17 +152,6 @@ apply (name:["Ancient shard","Dark totem *"]) {
 }
 
 //OVERRIDES
-apply (name:"* rune") {
-	color = "#95c8d8";
-	menuTextColor = "#95c8d8";
-}
-
-//Grimy Herbs are green
-apply (name:"grimy*") {
-	color = GREEN;
-	menuTextColor = GREEN;
-}
-
 
 apply (value:>100_000) {
 	textColor = "000000";
