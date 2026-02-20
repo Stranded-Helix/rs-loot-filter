@@ -166,29 +166,22 @@ apply (name:["Ancient shard","Dark totem *"]) {
 
 //OVERRIDES
 
-apply (value:>100_000) {
-	textColor = "000000";
-	borderColor = "000000";
-	backgroundColor = "6C8EBF";
-	textAccent = 3;
-	menuTextColor = "000000";
+apply (value:>20_000) {
+	showLootBeam = true;
+	lootbeamColor = "FF66B2FF"
 }
 
-apply (value:>500_000) {
-	textColor = "000000";
-	borderColor = "000000";
-	backgroundColor = "CFE9FF";
-	textAccent = 3;
+apply (value:>100_000) {
 	showLootBeam = true;
-	lootbeamColor = "0041c2";
-	menuTextColor = "000000";
+	lootbeamColor = "FF99FF99"
 }
 
 apply (value:>1_000_000) {
-	textColor = "ff0000";
-	borderColor = "ff0000";
-	backgroundColor = "ffffff";
-	textAccent = 3;
 	showLootBeam = true;
-	menuTextColor = "ff0000";
+	lootbeamColor = "FFFF9600"
+}
+
+apply (value:>10_000_000) {
+	showLootBeam = true;
+	lootbeamColor = "FFFF66B2"
 }
