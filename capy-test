@@ -168,20 +168,20 @@ apply (name:["Ancient shard","Dark totem *"]) {
 
 apply (value:>20_000) {
 	showLootBeam = true;
-	lootbeamColor = "FF66B2FF"
+	lootbeamColor = "FF66B2FF";
 }
 
 apply (value:>100_000) {
 	showLootBeam = true;
-	lootbeamColor = "FF99FF99"
+	lootbeamColor = "FF99FF99";
 }
 
 apply (value:>1_000_000) {
 	showLootBeam = true;
-	lootbeamColor = "FFFF9600"
+	lootbeamColor = "FFFF9600";
 }
 
 apply (value:>10_000_000) {
 	showLootBeam = true;
-	lootbeamColor = "FFFF66B2"
+	lootbeamColor = "FFFF66B2";
 }
