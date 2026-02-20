@@ -119,7 +119,7 @@ apply ((area:CONST_AREA_DUSTDEVIL2) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPO
 
 
 //TESTING
-apply (havalue:>700) {
+apply ((havalue:>700) && (havalue:<=10_000)) {
 	//color = "#6a5acd";
 	color = "#7C6CFF";
 	icon = Sprite(41,0);
@@ -129,7 +129,7 @@ apply (havalue:>700) {
 	showDespawn = true;
 }
 
-apply (havalue:>10_000) {
+apply ((havalue:>10_000) && (havalue:<=20_000)) {
 	//color = "#2e8b57";
 	color = "#2ECC71";
 	icon = Sprite(41,0);
@@ -139,7 +139,7 @@ apply (havalue:>10_000) {
 	showDespawn = true;
 }
 
-apply (havalue:>20_000) {
+apply ((havalue:>20_000) && (havalue:<=150_000)) {
 	//color = "#4682b4";
 	color = "#5DA9FF";
 	icon = Sprite(41,0);
@@ -172,16 +172,19 @@ apply (value:>20_000) {
 }
 
 apply (value:>100_000) {
+	color = "FF99FF99";
 	showLootBeam = true;
 	lootbeamColor = "FF99FF99";
 }
 
 apply (value:>1_000_000) {
+	color = "FFFF9600";
 	showLootBeam = true;
 	lootbeamColor = "FFFF9600";
 }
 
 apply (value:>10_000_000) {
+	color = "FFFF66B2";
 	showLootBeam = true;
 	lootbeamColor = "FFFF66B2";
 }
