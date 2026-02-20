@@ -58,16 +58,29 @@ label: Default style
 
 apply (true) { VAR_DEFAULTS_STYLE }
 
-//Filter out Certain item types
-rule (name:"* rune") {
-	color = "#95c8d8";
-	menuTextColor = "#95c8d8";
+//apply tick counter to all items
+apply (value:>0) {
+	showDespawn = true;
 }
 
 //Grimy Herbs are green
 rule (name:"grimy*") {
 	color = GREEN;
 	menuTextColor = GREEN;
+	menuSort = 10;
+}
+
+//Filter out Certain item types
+rule ((name:"* rune") && ((quantity:>=15) || (value:>100))) {
+	color = "#95c8d8";
+	menuTextColor = "#95c8d8";
+	menuSort = 9;
+}
+
+rule (noted:true) {
+	color = "C9B25A";
+	menuTextColor = "C9B25A";
+	menuSort = 8;
 }
 
 apply (value:<1000) {
@@ -106,7 +119,7 @@ apply ((area:CONST_AREA_DUSTDEVIL2) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPO
 
 
 //TESTING
-apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>700)) {
+apply (havalue:>700) {
 	//color = "#6a5acd";
 	color = "#7C6CFF";
 	icon = Sprite(41,0);
@@ -116,7 +129,7 @@ apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_W
 	showDespawn = true;
 }
 
-apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>10_000)) {
+apply (havalue:>10_000) {
 	//color = "#2e8b57";
 	color = "#2ECC71";
 	icon = Sprite(41,0);
@@ -126,7 +139,7 @@ apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_W
 	showDespawn = true;
 }
 
-apply ((area:CONST_AREA_EDGEVILLE_BANK) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) && (havalue:>20_000)) {
+apply (havalue:>20_000) {
 	//color = "#4682b4";
 	color = "#5DA9FF";
 	icon = Sprite(41,0);
