@@ -83,6 +83,37 @@ rule (noted:true) {
 	menuSort = 8;
 }
 
+//Clue scrolls
+rule (name:["Scroll box (beginner)", "Clue scroll (beginner)"]) {
+	color = "A89D9C";
+	menuTextColor = "A89D9C";
+}
+
+rule (name:["Scroll box (easy)", "Clue scroll (easy)"]) {
+	color = "1D7320";
+	menuTextColor = "1D7320";
+}
+
+rule (name:["Scroll box (medium)", "Clue scroll (medium)"]) {
+	color = "569699";
+	menuTextColor = "569699";
+}
+
+rule (name:["Scroll box (hard)", "Clue scroll (hard)"]) {
+	color = "7E3694";
+	menuTextColor = "7E3694";
+}
+
+rule (name:["Scroll box (elite)", "Clue scroll (elite)"]) {
+	color = "BDA518";
+	menuTextColor = "BDA518";
+}
+
+rule (name:["Scroll box (master)", "Clue scroll (master)"]) {
+	color = "9B3026";
+	menuTextColor = "9B3026";
+}
+
 apply (value:<1000) {
 	hideOverlay = true;
 	menuTextColor = "706555";
