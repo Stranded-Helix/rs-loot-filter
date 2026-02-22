@@ -94,7 +94,7 @@ rule (name:["Scroll box (easy)", "Clue scroll (easy)"]) {
 	menuTextColor = "1D7320";
 }
 
-rule (name:["Scroll box (medium)", "Clue scroll (medium)"]) {
+rule (name:["Scroll box (medium)", "Clue scroll (medium)", "Key (medium)"]) {
 	color = "569699";
 	menuTextColor = "569699";
 }
@@ -104,7 +104,7 @@ rule (name:["Scroll box (hard)", "Clue scroll (hard)"]) {
 	menuTextColor = "7E3694";
 }
 
-rule (name:["Scroll box (elite)", "Clue scroll (elite)"]) {
+rule (name:["Scroll box (elite)", "Clue scroll (elite)", "Key (elite)"]) {
 	color = "BDA518";
 	menuTextColor = "BDA518";
 }
