@@ -119,6 +119,11 @@ rule (name:["Corrupted shards", "Corrupted dust", "Corrupted teleport crystal"])
 	menuTextColor = "6E0D25";
 }
 
+rule (name:"Weapon frame") {
+	color = "FFFFFF";
+	menuTextColor = "FFFFFF";
+}
+
 rule (name:"Corrupted spike") {
 	color = "B4153D";
 	menuTextColor = "B4153D";
