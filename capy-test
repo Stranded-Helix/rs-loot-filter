@@ -114,6 +114,36 @@ rule (name:["Scroll box (master)", "Clue scroll (master)"]) {
 	menuTextColor = "9B3026";
 }
 
+rule (name:["Corrupted shards", "Corrupted dust", "Corrupted teleport crystal"]) {
+	color = "6E0D25";
+	menuTextColor = "6E0D25";
+}
+
+rule (name:"Corrupted spike") {
+	color = "B4153D";
+	menuTextColor = "B4153D";
+}
+
+rule (name:"Corrupted bowstring") {
+	color = "19DE09";
+	menuTextColor = "19DE09";
+}
+
+rule (name:"Corrupted orb") {
+	color = "0773E8";
+	menuTextColor = "0773E8";
+}
+
+rule (name:"Raw paddlefish") {
+	color = "34D282";
+	menuTextColor = "34D282";
+}
+
+rule (name:"Paddlefish") {
+	color = "AAAA9E";
+	menuTextColor = "AAAA9E";
+}
+
 apply (value:<1000) {
 	hideOverlay = true;
 	menuTextColor = "706555";
