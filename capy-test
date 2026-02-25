@@ -149,6 +149,11 @@ rule (name:"Paddlefish") {
 	menuTextColor = "AAAA9E";
 }
 
+rule (name:"Ensouled *") {
+	color = "B1C7B5";
+	menuTextColor = "B1C7B5";
+}
+
 apply (value:<1000) {
 	hideOverlay = true;
 	menuTextColor = "706555";
