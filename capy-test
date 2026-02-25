@@ -154,6 +154,16 @@ rule (name:"Ensouled *") {
 	menuTextColor = "B1C7B5";
 }
 
+rule (name:"Lobster") {
+	color = "9A4209";
+	menuTextColor = "9A4209";
+}
+
+rule (name:"Swordfish") {
+	color = "744A7D";
+	menuTextColor = "744A7D";
+}
+
 apply (value:<1000) {
 	hideOverlay = true;
 	menuTextColor = "706555";
