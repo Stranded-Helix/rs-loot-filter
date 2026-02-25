@@ -155,13 +155,13 @@ rule (name:"Ensouled *") {
 }
 
 rule (name:"Lobster") {
-	color = "9A4209";
-	menuTextColor = "9A4209";
+	color = "DF5F0D";
+	menuTextColor = "DF5F0D";
 }
 
 rule (name:"Swordfish") {
-	color = "744A7D";
-	menuTextColor = "744A7D";
+	color = "964DA4";
+	menuTextColor = "964DA4";
 }
 
 apply (value:<1000) {
