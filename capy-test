@@ -230,7 +230,7 @@ apply ((havalue:>20_000) && (havalue:<=150_000)) {
 
 //dark amber "#883000"
 
-apply (name:["Ancient shard","Dark totem *"]) {
+apply (name:["Ancient shard","Dark totem *", "Brittle key"]) {
 	hideOverlay = false;
 	textColor = "#000000";
 	textAccent = 3;
