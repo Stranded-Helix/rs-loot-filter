@@ -160,8 +160,8 @@ rule (name:"Lobster") {
 }
 
 rule (name:"Swordfish") {
-	color = "964DA4";
-	menuTextColor = "964DA4";
+	color = "DF5F0D";
+	menuTextColor = "DF5F0D";
 }
 
 apply (value:<1000) {
