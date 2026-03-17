@@ -169,12 +169,16 @@ rule (name:HIGH_VALUE_BONES) {
 	lootbeamColor = "B1C7B5";
 }
 
-rule (name:"Lobster") {
-	color = "DF5F0D";
-	menuTextColor = "DF5F0D";
+//Food Items
+//Low Heal is 8 or Less
+#define LOW_HEAL_FOOD ["Bread", "Shrimps","Anchovies","Sardine","Trout","Cod","Herring","Pike","Mackerel","Caerula berries","Jangerberries","Bruised banana","Banana","Cabbage","Onion","Potato","Tomato","Cheese","Lemon","Lemon chunks","Lemon slices","Orange","Orange chunks","Orange slices","Pineapple chunks","Pineapple ring","Lime","Lime chunks","Lime slices","Dwellberries","Spinach roll","Chocolate bar","Chopped tomato","Chopped onion","Onion & tomato","Ugthanki meat","Toad's legs","King worm","Edible seaweed","Cooked chicken","Cooked meat","Cup of tea","Cup of tea (nettle)","Cup of tea (damiana)","Cup of tea (milky damiana)","Damiana tea","Damiana tea (milky)","Karamjan rum","Vodka","Whisky","Gin","Brandy","Beer","Asgarnian ale","Wizard's mind bomb","Greenman's ale","Dragon bitter","Dwarven stout","Grog","Chocolatey milk","Half full wine jug","Premade choc s'dy","Premade dr' dragon","Premade sgg","Premade wiz blz'd","Wizard blizzard","Choc saturday","Short green guy","Drunk dragon","Blurberry special","Premade blurb' sp.","Worm crunchies","Toad crunchies","Premade w'm crun'","Chocchip crunchies","Spicy crunchies","Equa leaves","Pot of cream","Kebab", "Slice of cake", "2/3 cake", "Chocolate slice"]
+#define FOOD ["Salmon","Tuna","Bass","Swordfish","Lobster","Shark","Manta ray","Sea turtle","Jug of wine","Stew","Curry","Ugthanki kebab","Lava eel","Chocolate bomb","Tangled toad's legs","Worm hole","Veg ball","Premade fr' blast","Premade p' punch","Pineapple punch","Fruit blast","Premade w'm batta","Premade t'd batta","Premade c+t batta","Premade fr't batta","Premade veg batta","Premade choc bomb","Premade ttl","Premade worm hole","Premade veg ball","Monkfish","Karambwan","Pumpkin","Easter egg","Anchovy pizza","Plain pizza","Meat pizza","Pineapple pizza","Wild pie","Summer pie","Admiral pie","Dragonfruit pie","Potato with cheese","Egg potato","Tuna potato","Dark crab","Anglerfish","Marlin","Bluefin tuna","Cooked karambwan","Cooked moonlight antelope","Cooked dashing kebbit","Cooked sunlight antelope", "2/3 chocolate cake"]
+rule (name:LOW_HEAL_FOOD) {
+	color = "7F2F06";
+	menuTextColor = "7F2F06";
 }
 
-rule (name:"Swordfish") {
+rule (name:FOOD) {
 	color = "DF5F0D";
 	menuTextColor = "DF5F0D";
 }
