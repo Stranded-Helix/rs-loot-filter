@@ -114,6 +114,7 @@ rule (name:["Scroll box (master)", "Clue scroll (master)"]) {
 	menuTextColor = "9B3026";
 }
 
+//Corrupted Gauntlet
 rule (name:["Corrupted shards", "Corrupted dust", "Corrupted teleport crystal"]) {
 	color = "6E0D25";
 	menuTextColor = "6E0D25";
@@ -149,7 +150,11 @@ rule (name:"Paddlefish") {
 	menuTextColor = "AAAA9E";
 }
 
-rule (name:"Ensouled *") {
+//PRAYER ITEMS
+#define ENSOULED "Ensouled *"
+#define BONES ["Bones","Bat Bones","Big Bones","Burnt Bones","Monkey Bones","Wolf Bones","Jogre Bones","Zogre Bones","Shaikahan Bones","Babydragon Bones","Wyvern Bones","Dragon Bones","Lava Dragon Bones","Dagannoth Bones","Ourg Bones","Superior Dragon Bones"]
+#define ASHES ["Fiendish ashes","Vile ashes","Malicious ashes","Abyssal ashes","Infernal ashes"]
+apply ((name:ENSOULED) || (name:BONES) || (name:ASHES)) {
 	color = "B1C7B5";
 	menuTextColor = "B1C7B5";
 }
