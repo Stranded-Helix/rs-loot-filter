@@ -186,8 +186,9 @@ rule ((name:FOOD) || (name:SPECIAL_FOOD)) {
 #define KEY_DROPS ["Loop half of key", "Tooth half of key", "Crystal key", "Enhanced crystal key", "Moon key", "Brittle key", "Brimstone key", "Dark key", "Ecumenical key", "Giant key", "Grubby key", "Larran's key", "Loot key", "Mossy key", "Muddy key", "Ogre coffin key", "Sinister key", "Zombie pirate key"]
 #define UNCOMMON_DROPS ["Curved bone", "Long bone", "Perfect shell", "Perfect snail shell"]
 #define RARE_DROPS ["Shield left half", "Dragon spear"]
+#define MONSTER_COLLECTABLES ["Lizardman fang", "Xeric's talisman (inert)"]
 
-rule ((name:KEY_DROPS) || (name:UNCOMMON_DROPS)) {
+rule ((name:KEY_DROPS) || (name:UNCOMMON_DROPS) || (name:MONSTER_COLLECTABLES)) {
 	color = "5F0D06";
 	menuTextColor = "5F0D06";
 }
