@@ -279,6 +279,18 @@ apply (name:["Ancient shard","Dark totem *", "Brittle key"]) {
 	menuTextColor = "#883000";
 }
 
+//VALUABLES WITH NO NUMERIC VALUE
+
+#define VALUABLES_NO_VALUE ["Spirit seed", "Toadflax seed"]
+
+apply (name:VALUABLES_NO_VALUE) {
+	showLootBeam = true;
+	lootbeamColor = "FF66B2FF";
+	textColor = "FF66B2FF";
+	menuTextColor = "FF66B2FF";
+	hideOverlay = false;
+}
+
 //OVERRIDES
 
 apply (value:>20_000) {
