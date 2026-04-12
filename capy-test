@@ -69,15 +69,23 @@ rule (name:"grimy*") {
 }
 
 #define HERB_SEEDS ["Ranarr seed", "Toadflax seed", "Irit seed", "Avantoe seed", "Kwuarm seed", "Snapdragon seed", "Huasca seed", "Cadantine seed", "Lantadyme seed", "Dwarf weed seed", "Torstol seed"]
+#define SEEDS ["Hemp seed", "Cotton seed", "Elkhorn frag", "Pillar frag", "Umbral Frag", "Camphor seed", "Ironwood seed", "Rosewood seed", "Spirit seed"]
 
-rule (name:HERB_SEEDS) {
+rule ((name:HERB_SEEDS) || (name:SEEDS)) {
 	color = "#2E6F40";
 	menuTextColor = "#2E6F40";
 	menuSort = 10;
 }
 
 //Filter out Certain item types
-rule ((name:"* rune") && ((quantity:>=15) || (value:>100))) {
+#define WILDERNESS_TELEPORTS ["Revenant cave teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport"]
+rule ((name:"* rune") && ((quantity:>=15) || (value:>100)))) {
+	color = "#95c8d8";
+	menuTextColor = "#95c8d8";
+	menuSort = 9;
+}
+
+rule (name:WILDERNESS_TELEPORTS) {
 	color = "#95c8d8";
 	menuTextColor = "#95c8d8";
 	menuSort = 9;
@@ -181,12 +189,13 @@ rule (name:HIGH_VALUE_BONES) {
 #define LOW_HEAL_FOOD ["Bread", "Shrimps","Anchovies","Sardine","Trout","Cod","Herring","Pike","Mackerel","Caerula berries","Jangerberries","Bruised banana","Banana","Cabbage","Onion","Potato","Tomato","Cheese","Lemon","Lemon chunks","Lemon slices","Orange","Orange chunks","Orange slices","Pineapple chunks","Pineapple ring","Lime","Lime chunks","Lime slices","Dwellberries","Spinach roll","Chocolate bar","Chopped tomato","Chopped onion","Onion & tomato","Ugthanki meat","Toad's legs","King worm","Edible seaweed","Cooked chicken","Cooked meat","Cup of tea","Cup of tea (nettle)","Cup of tea (damiana)","Cup of tea (milky damiana)","Damiana tea","Damiana tea (milky)","Karamjan rum","Vodka","Whisky","Gin","Brandy","Beer","Asgarnian ale","Wizard's mind bomb","Greenman's ale","Dragon bitter","Dwarven stout","Grog","Chocolatey milk","Half full wine jug","Premade choc s'dy","Premade dr' dragon","Premade sgg","Premade wiz blz'd","Wizard blizzard","Choc saturday","Short green guy","Drunk dragon","Blurberry special","Premade blurb' sp.","Worm crunchies","Toad crunchies","Premade w'm crun'","Chocchip crunchies","Spicy crunchies","Equa leaves","Pot of cream","Kebab", "Slice of cake", "2/3 cake", "Chocolate slice"]
 #define FOOD ["Salmon","Tuna","Bass","Swordfish","Lobster","Shark","Manta ray","Sea turtle","Jug of wine","Stew","Curry","Ugthanki kebab","Lava eel","Chocolate bomb","Tangled toad's legs","Worm hole","Veg ball","Premade fr' blast","Premade p' punch","Pineapple punch","Fruit blast","Premade w'm batta","Premade t'd batta","Premade c+t batta","Premade fr't batta","Premade veg batta","Premade choc bomb","Premade ttl","Premade worm hole","Premade veg ball","Monkfish","Karambwan","Pumpkin","Easter egg","Anchovy pizza","Plain pizza","Meat pizza","Pineapple pizza","Wild pie","Summer pie","Admiral pie","Dragonfruit pie","Potato with cheese","Egg potato","Tuna potato","Dark crab","Anglerfish","Marlin","Bluefin tuna","Cooked karambwan","Cooked moonlight antelope","Cooked dashing kebbit","Cooked sunlight antelope", "2/3 chocolate cake", "Chilli potato"]
 #define SPECIAL_FOOD ["Peach"]
+#define WILDERNESS_FOOD ["Blighted angerlfish", "Blighted karambwan", "Blighted manta ray"]
 rule (name:LOW_HEAL_FOOD) {
 	color = "7F2F06";
 	menuTextColor = "7F2F06";
 }
 
-rule ((name:FOOD) || (name:SPECIAL_FOOD)) {
+rule ((name:FOOD) || (name:SPECIAL_FOOD) || (name:WILDERNESS_FOOD)) {
 	color = "DF5F0D";
 	menuTextColor = "DF5F0D";
 }
@@ -196,8 +205,9 @@ rule ((name:FOOD) || (name:SPECIAL_FOOD)) {
 #define UNCOMMON_DROPS ["Curved bone", "Long bone", "Perfect shell", "Perfect snail shell"]
 #define RARE_DROPS ["Shield left half", "Dragon spear"]
 #define MONSTER_COLLECTABLES ["Lizardman fang", "Xeric's talisman (inert)"]
+#define WILDERNESS_UNCOMMONS ["Slayer's enchantment", "Magic shortbow scroll", "Ring of wealth scroll", "Looting bag note"]
 
-rule ((name:KEY_DROPS) || (name:UNCOMMON_DROPS) || (name:MONSTER_COLLECTABLES)) {
+rule ((name:KEY_DROPS) || (name:UNCOMMON_DROPS) || (name:MONSTER_COLLECTABLES) || (name:WILDERNESS_UNCOMMONS)) {
 	color = "5F0D06";
 	menuTextColor = "5F0D06";
 }
@@ -216,7 +226,7 @@ apply (value:<1000) {
 	textAccent = 4;
 }
 
-rule (value:<3_000 && name:"coins") {
+rule (value:<1_000 && name:"coins") {
 	hideOverlay = true;
 }
 
@@ -311,16 +321,19 @@ apply (value:>100_000) {
 	color = "FF99FF99";
 	showLootBeam = true;
 	lootbeamColor = "FF99FF99";
+	menuSort = 18;
 }
 
 apply (value:>1_000_000) {
 	color = "FFFF9600";
 	showLootBeam = true;
 	lootbeamColor = "FFFF9600";
+	menuSort = 19;
 }
 
 apply (value:>10_000_000) {
 	color = "FFFF66B2";
 	showLootBeam = true;
 	lootbeamColor = "FFFF66B2";
+	menuSort = 20;
 }
