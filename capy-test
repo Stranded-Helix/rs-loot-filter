@@ -68,6 +68,14 @@ rule (name:"grimy*") {
 	menuSort = 10;
 }
 
+#define HERB_SEEDS ["Ranarr seed", "Toadflax seed", "Irit seed", "Avantoe seed", "Kwuarm seed", "Snapdragon seed", "Huasca seed", "Cadantine seed", "Lantadyme seed", "Dwarf weed seed", "Torstol seed"]
+
+rule (name:HERB_SEEDS) {
+	color = "#2E6F40";
+	menuTextColor = "#2E6F40";
+	menuSort = 10;
+}
+
 //Filter out Certain item types
 rule ((name:"* rune") && ((quantity:>=15) || (value:>100))) {
 	color = "#95c8d8";
@@ -282,7 +290,7 @@ apply (name:["Ancient shard","Dark totem *", "Brittle key"]) {
 
 //VALUABLES WITH NO NUMERIC VALUE
 
-#define VALUABLES_NO_VALUE ["Spirit seed", "Toadflax seed"]
+#define VALUABLES_NO_VALUE ["Spirit seed"]
 
 apply (name:VALUABLES_NO_VALUE) {
 	showLootBeam = true;
