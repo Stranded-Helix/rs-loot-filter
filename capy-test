@@ -165,6 +165,7 @@ rule (name:HIGH_VALUE_BONES) {
 	menuTextColor = "B1C7B5";
 	showLootBeam = true;
 	lootbeamColor = "B1C7B5";
+	menuSort = 11;
 }
 
 //FOOD ITEMS
