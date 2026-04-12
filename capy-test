@@ -79,7 +79,7 @@ rule ((name:HERB_SEEDS) || (name:SEEDS)) {
 
 //Filter out Certain item types
 #define WILDERNESS_TELEPORTS ["Revenant cave teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport"]
-rule ((name:"* rune") && ((quantity:>=15) || (value:>100)))) {
+rule ((name:"* rune") && ((quantity:>=15) || (value:>100))) {
 	color = "#95c8d8";
 	menuTextColor = "#95c8d8";
 	menuSort = 9;
