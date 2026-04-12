@@ -200,6 +200,76 @@ rule ((name:FOOD) || (name:SPECIAL_FOOD) || (name:WILDERNESS_FOOD)) {
 	menuTextColor = "DF5F0D";
 }
 
+//RAID ITEMS
+//MALLIGNUM
+#define MALLIGNUM "Mallignum root plank"
+rule ((name:MALLIGNUM)) {
+    color = "65602E";
+    menuTextColor = "65602E";
+}
+
+//HAMMER
+#define HAMMER "Hammer"
+rule ((name:HAMMER)) {
+    color = "563A09";
+    menuTextColor = "563A09";
+}
+
+//CICELY
+#define CICELY "Cicely"
+rule ((name:CICELY)) {
+    color = "85403D";
+    menuTextColor = "85403D";
+}
+
+//GOURD VIAL
+#define GOURD "Water-filled gourd vial"
+rule ((name:GOURD)) {
+    color = "8C93C8";
+    menuTextColor = "8C93C8";
+}
+
+//REVITALISATION
+#define REVITALISATION ["Stinkhorn mushroom","Revitalisation (+)(4)","Revitalisation (+)(3)","Revitalisation (+)(2)","Revitalisation (+)(1)","Revitalisation potion (4)","Revitalisation potion (3)","Revitalisation potion (2)","Revitalisation potion (1)","Revitalisation (-)(4)","Revitalisation (-)(3)","Revitalisation (-)(2)","Revitalisation (-)(1)"]
+
+rule ((name:REVITALISATION)) {
+    color = "AE3F6C";
+    menuTextColor = "AE3F6C";
+}
+
+//XERIC'S AID
+#define XERICS_AID ["Endarkened juice","Xeric's aid (+)(4)","Xeric's aid (+)(3)","Xeric's aid (+)(2)","Xeric's aid (+)(1)","Xeric's aid (4)","Xeric's aid (3)","Xeric's aid (2)","Xeric's aid (1)","Xeric's aid (-)(4)","Xeric's aid (-)(3)","Xeric's aid (-)(2)","Xeric's aid (-)(1)","Endarkened juice"]
+
+rule ((name:XERICS_AID)) {
+    color = "BAB943";
+    menuTextColor = "BAB943";
+}
+
+//OVERLOAD
+#define OVERLOAD ["Overload (+)(4)","Overload (+)(3)","Overload (+)(2)","Overload (+)(1)","Overload (4)","Overload (3)","Overload (2)","Overload (1)","Overload (-)(4)","Overload (-)(3)","Overload (-)(2)","Overload (-)(1)"]
+
+rule ((name:OVERLOAD)) {
+    color = "151111";
+    menuTextColor = "151111";
+}
+
+//PRAYER ENHANCE
+#define PRAYER_ENHANCE ["Prayer enhance (+)(4)","Prayer enhance (+)(3)","Prayer enhance (+)(2)","Prayer enhance (+)(1)","Prayer enhance (4)","Prayer enhance (3)","Prayer enhance (2)","Prayer enhance (1)","Prayer enhance (-)(4)","Prayer enhance (-)(3)","Prayer enhance (-)(2)","Prayer enhance (-)(1)"]
+
+rule ((name:PRAYER_ENHANCE)) {
+    color = "8318CE";
+    menuTextColor = "8318CE";
+}
+
+//ANTIPOISON
+#define ANTIPOISON ["Antipoison (+)(4)","Antipoison (+)(3)","Antipoison (+)(2)","Antipoison (+)(1)","Antipoison potion (4)","Antipoison potion (3)","Antipoison potion (2)","Antipoison potion (1)","Antipoison (-)(4)","Antipoison (-)(3)","Antipoison (-)(2)","Antipoison (-)(1)"]
+
+rule ((name:ANTIPOISON)) {
+    color = "78D919";
+    menuTextColor = "78D919";
+}
+
+
 //RARE DROPS
 #define KEY_DROPS ["Loop half of key", "Tooth half of key", "Crystal key", "Enhanced crystal key", "Moon key", "Brittle key", "Brimstone key", "Dark key", "Ecumenical key", "Giant key", "Grubby key", "Larran's key", "Loot key", "Mossy key", "Muddy key", "Ogre coffin key", "Sinister key", "Zombie pirate key"]
 #define UNCOMMON_DROPS ["Curved bone", "Long bone", "Perfect shell", "Perfect snail shell"]
