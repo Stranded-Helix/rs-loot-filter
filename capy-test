@@ -311,7 +311,7 @@ rule (name:CHAMP_SCROLLS) {
 	lootbeamColor = "7F1108";
 	fontType = 3;
 	highlightTile = true;
-	tileBorder = "7F1108";
+	tileStrokeColor = "7F1108";
 	menuSort = 20;
 }
 
