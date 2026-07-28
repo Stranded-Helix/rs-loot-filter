@@ -289,11 +289,12 @@ rule ((name:ANTIPOISON)) {
 #define RARE_DROPS ["Shield left half", "Dragon spear"]
 #define MONSTER_COLLECTABLES ["Lizardman fang", "Xeric's talisman (inert)"]
 #define WILDERNESS_UNCOMMONS ["Slayer's enchantment", "Magic shortbow scroll", "Ring of wealth scroll", "Looting bag note"]
-#define CHAMP_SCROLLS ["* champion scroll", "Crushed infernal shale"]
+#define CHAMP_SCROLLS ["* champion scroll"]
 
 rule ((name:KEY_DROPS) || (name:UNCOMMON_DROPS) || (name:MONSTER_COLLECTABLES) || (name:WILDERNESS_UNCOMMONS)) {
 	color = "5F0D06";
 	menuTextColor = "5F0D06";
+fontType = FONTTYPE_BOLD;
 }
 
 rule (name:RARE_DROPS) {
@@ -304,15 +305,19 @@ rule (name:RARE_DROPS) {
 }
 
 rule (name:CHAMP_SCROLLS) {
-	color = "7F1108";
-	menuTextColor = "FFFFFF";
-	borderColor = "7F1108";
+	fontType = FONTTYPE_BOLD;
+	color = "e2070c";
+	textAccent = 3;
+	textAccentColor = "e2070c";
+	menuTextColor = "e2070c";
+	borderColor = "e2070c";
 	backgroundColor = "FFFFFF";
-	lootbeamColor = "7F1108";
-	fontType = 3;
+	lootbeamColor = "e2070c";
 	highlightTile = true;
-	tileStrokeColor = "7F1108";
+	tileStrokeColor = "e2070c";
+	tileFillColor = "22FFFFFF";
 	menuSort = 20;
+	sound = "divine.wav";
 }
 
 apply (value:<1000) {
@@ -427,8 +432,14 @@ apply (value:>1_000_000) {
 }
 
 apply (value:>10_000_000) {
-	color = "FFFF66B2";
+	fontType = 3;
+	color = "e2070c";
 	showLootBeam = true;
 	lootbeamColor = "FFFF66B2";
+	lootbeamColor = "660000";
 	menuSort = 20;
+	textAccent = 3;
+	borderColor = "e2070c";
+	backgroundColor = "BBFFFFFF";
+	sound = "divine.wav";
 }
