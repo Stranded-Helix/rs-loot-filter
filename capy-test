@@ -410,6 +410,12 @@ apply (name:VALUABLES_NO_VALUE) {
 	hideOverlay = false;
 }
 
+#define JARS ["Jar of *"]
+#define RARE_NOT_WORTH ["Draconic visage", "Skeletal visage", "Wyvern visage"]
+#define VOIDWAKER_PIECES ["Voidwaker *"]
+#define SOULREAPER_AXE_PIECES ["Eye of the duke", "Leviathan's lure", "Siren's staff", "Executioner's axe head"]
+#define BIS_DROPS ["* vestige", "Primordial crystal", "Pegasian crystal", "Eternal crystal", "Granite hammer", "Dragonbone necklace", "Tanzanite fang"]
+
 //OVERRIDES
 
 apply (value:>20_000) {
@@ -424,14 +430,14 @@ apply (value:>100_000) {
 	menuSort = 18;
 }
 
-apply (value:>1_000_000) {
+apply ((value:>1_000_000) || (name:JARS)) {
 	color = "FFFF9600";
 	showLootBeam = true;
 	lootbeamColor = "FFFF9600";
 	menuSort = 19;
 }
 
-apply (value:>10_000_000) {
+apply ((value:>10_000_000) || (name:RARE_NOT_WORTH) || (name:VOIDWAKER_PIECES) || (name:SOULREAPER_AXE_PIECES) || (name:BIS_DROPS)) {
 	fontType = 3;
 	color = "e2070c";
 	showLootBeam = true;
