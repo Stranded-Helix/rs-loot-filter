@@ -171,7 +171,7 @@ rule (name:"Paddlefish") {
 #define HIGH_VALUE_BONES ["Ourg bones", "Superior dragon bones", "Dagannoth bones", "Hydra bones", "Frost dragon bones"]
 #define ASHES ["Fiendish ashes","Vile ashes","Malicious ashes","Abyssal ashes","Infernal ashes"]
 #define SHADE_REMAINS ["Loar remains", "Phrin remains", "Riyl remains", "Asyn remains", "Fiyr remains", "Urium remains"]
-rule ((name:ENSOULED) || (name:BONES) || (name:ASHES) || (name:SHADE_REMAINS)) {
+rule ((name:ENSOULED) || (name:BONES) || (name:MED_VALUE_BONES) || (name:ASHES) || (name:SHADE_REMAINS)) {
 	color = "B1C7B5";
 	menuTextColor = "B1C7B5";
 }
