@@ -289,6 +289,7 @@ rule ((name:ANTIPOISON)) {
 #define RARE_DROPS ["Shield left half", "Dragon spear"]
 #define MONSTER_COLLECTABLES ["Lizardman fang", "Xeric's talisman (inert)"]
 #define WILDERNESS_UNCOMMONS ["Slayer's enchantment", "Magic shortbow scroll", "Ring of wealth scroll", "Looting bag note"]
+#define CHAMP_SCROLLS ["* champion scroll", "Crushed infernal shale"]
 
 rule ((name:KEY_DROPS) || (name:UNCOMMON_DROPS) || (name:MONSTER_COLLECTABLES) || (name:WILDERNESS_UNCOMMONS)) {
 	color = "5F0D06";
@@ -300,7 +301,18 @@ rule (name:RARE_DROPS) {
 	menuTextColor = "7F1108";
 	showLootBeam = true;
 	lootbeamColor = "7F1108";
+}
 
+rule (name:CHAMP_SCROLLS) {
+	color = "7F1108";
+	menuTextColor = "FFFFFF";
+	borderColor = "7F1108";
+	backgroundColor = "FFFFFF";
+	lootbeamColor = "7F1108";
+	fontType = 3;
+	highlightTile = true;
+	tileBorder = "7F1108";
+	menuSort = 20;
 }
 
 apply (value:<1000) {
