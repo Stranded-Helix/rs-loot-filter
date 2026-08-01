@@ -164,6 +164,15 @@ rule (name:"Paddlefish") {
 	menuTextColor = "AAAA9E";
 }
 
+//RESOURCES
+
+#define RESOURCES ["Gryphon feather", "Uncut *", "Sapphire", "Emerald", "Ruby", "Diamond", "Dragonstone"]
+
+rule (name:RESOURCES) {
+	color = "D8BFD8";
+	menuTextColor = "D8BFD8";
+}
+
 //PRAYER ITEMS
 #define ENSOULED "Ensouled *"
 #define BONES ["Bones","Bat bones","Big bones","Burnt bones","Monkey bones","Wolf bones","Jogre bones","Zogre bones","Shaikahan bones","Babydragon bones"]
