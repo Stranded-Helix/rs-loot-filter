@@ -168,6 +168,13 @@ rule (name:"Paddlefish") {
 
 #define RESOURCES ["Gryphon feather", "Uncut *", "Sapphire", "Emerald", "Ruby", "Diamond", "Dragonstone"]
 
+rule ((name:RESOURCES) && (quantity:>3)) {
+	color = "D8BFD8";
+	menuTextColor = "D8BFD8";
+	showLootBeam = true;
+	lootbeamColor = "D8BFD8";
+}
+
 rule (name:RESOURCES) {
 	color = "D8BFD8";
 	menuTextColor = "D8BFD8";
