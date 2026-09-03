@@ -298,6 +298,15 @@ rule ((name:ANTIPOISON)) {
     menuTextColor = "78D919";
 }
 
+//CONTAINERS (Re-rolls)
+#define HIGH_VALUE_CONTAINERS ["Cache of runes", "Dossier", "Frozen cache", "Forgotten lockbox", "Mystery box", "Reward casket*"]
+
+rule (name:HIGH_VALUE_CONTAINERS) {
+	color = "FA7082";
+	menuTextColor = "FA7082";
+	showLootBeam = true;
+	lootbeamColor = "FA7082";
+}
 
 //RARE DROPS
 #define KEY_DROPS ["Loop half of key", "Tooth half of key", "Crystal key", "Enhanced crystal key", "Moon key", "Brittle key", "Brimstone key", "Dark key", "Ecumenical key", "Giant key", "Grubby key", "Larran's key", "Loot key", "Mossy key", "Muddy key", "Ogre coffin key", "Sinister key", "Zombie pirate key"]
