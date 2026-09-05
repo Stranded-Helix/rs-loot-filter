@@ -230,6 +230,22 @@ rule ((name:SUPER_RESTORES)) {
 }
 
 ////RAID ITEMS
+//SEEDS
+rule (name:"Golpar seed") {
+	color = "565656";
+	menuTextColor = "565656";
+}
+
+rule (name:"Noxifer seed") {
+	color = "949396";
+    menuTextColor = "949396";
+}
+
+rule (name:"Buchu seed") {
+	color = "BB81A3";
+	menuTextColor = "BB81A3";
+}
+
 //MALLIGNUM
 #define MALLIGNUM "Mallignum root plank"
 rule ((name:MALLIGNUM)) {
@@ -280,6 +296,8 @@ rule ((name:XERICS_AID)) {
 rule ((name:OVERLOAD)) {
     color = "151111";
     menuTextColor = "151111";
+	textAccent = 4;
+	textAccentColor = "949396";
 }
 
 //PRAYER ENHANCE
