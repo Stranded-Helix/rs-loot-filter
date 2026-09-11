@@ -91,12 +91,6 @@ rule (name:WILDERNESS_TELEPORTS) {
 	menuSort = 9;
 }
 
-rule (noted:true) {
-	color = "C9B25A";
-	menuTextColor = "C9B25A";
-	menuSort = 8;
-}
-
 //Clue scrolls
 rule (name:["Scroll box (beginner)", "Clue scroll (beginner)"]) {
 	color = "A89D9C";
@@ -403,8 +397,6 @@ apply ((area:CONST_AREA_DUSTDEVIL2) && (name:VAR_DUSTDEVIL_ENUMLIST_FILTER_WEAPO
 apply ((havalue:>700) && (havalue:<=10_000)) {
 	//color = "#6a5acd";
 	color = "#7C6CFF";
-	textAccent = 2;
-	textAccentColor = "#363636";
 	menuSort = 1;
 	showDespawn = true;
 }
@@ -412,8 +404,6 @@ apply ((havalue:>700) && (havalue:<=10_000)) {
 apply ((havalue:>10_000) && (havalue:<=20_000)) {
 	//color = "#2e8b57";
 	color = "#2ECC71";
-	textAccent = 2;
-	textAccentColor = "#363636";
 	menuSort = 2;
 	showDespawn = true;
 }
@@ -421,8 +411,6 @@ apply ((havalue:>10_000) && (havalue:<=20_000)) {
 apply ((havalue:>20_000) && (havalue:<=150_000)) {
 	//color = "#4682b4";
 	color = "#5DA9FF";
-	textAccent = 2;
-	textAccentColor = "#363636";
 	menuSort = 3;
 	showDespawn = true;
 	notify = true;
@@ -495,4 +483,9 @@ apply ((value:>10_000_000) || (name:RARE_NOT_WORTH) || (name:VOIDWAKER_PIECES) |
 	borderColor = "e2070c";
 	backgroundColor = "BBFFFFFF";
 	sound = "divine.wav";
+}
+
+apply (noted:true) {
+	textAccent = 4;
+	textAccentColor = "#574e2d";
 }
