@@ -469,6 +469,7 @@ apply (value:>20_000) {
 
 apply (value:>100_000) {
 	color = "FF99FF99";
+	menuTextColor = "FF99FF99";
 	showLootBeam = true;
 	lootbeamColor = "FF99FF99";
 	menuSort = 18;
@@ -476,6 +477,7 @@ apply (value:>100_000) {
 
 apply ((value:>1_000_000) || (name:JARS)) {
 	color = "FFFF9600";
+	menuTextColor = "FFFF9600";
 	showLootBeam = true;
 	lootbeamColor = "FFFF9600";
 	menuSort = 19;
@@ -484,6 +486,7 @@ apply ((value:>1_000_000) || (name:JARS)) {
 apply ((value:>10_000_000) || (name:RARE_NOT_WORTH) || (name:VOIDWAKER_PIECES) || (name:SOULREAPER_AXE_PIECES) || (name:BIS_DROPS)) {
 	fontType = 3;
 	color = "e2070c";
+	menuTextColor = "e2070c";
 	showLootBeam = true;
 	lootbeamColor = "FFFF66B2";
 	lootbeamColor = "660000";
