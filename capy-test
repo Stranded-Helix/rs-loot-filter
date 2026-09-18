@@ -123,7 +123,7 @@ rule (name:["Scroll box (master)", "Clue scroll (master)"]) {
 }
 
 //Corrupted Gauntlet
-rule (name:["Corrupted shards", "Corrupted dust", "Corrupted teleport crystal"]) {
+rule (name:["Corrupted shards", "Corrupted dust", "Corrupted teleport crystal", "Crystal dust", "Crystal teleport crystal"]) {
 	color = "6E0D25";
 	menuTextColor = "6E0D25";
 }
@@ -133,17 +133,17 @@ rule (name:"Weapon frame") {
 	menuTextColor = "FFFFFF";
 }
 
-rule (name:"Corrupted spike") {
+rule ((name:"Corrupted spike") || (name:"Crystal spike")) {
 	color = "B4153D";
 	menuTextColor = "B4153D";
 }
 
-rule (name:"Corrupted bowstring") {
+rule ((name:"Corrupted bowstring") || (name:"Crystal bowstring")) {
 	color = "19DE09";
 	menuTextColor = "19DE09";
 }
 
-rule (name:"Corrupted orb") {
+rule ((name:"Corrupted orb") || (name:"Crystal orb")) {
 	color = "0773E8";
 	menuTextColor = "0773E8";
 }
