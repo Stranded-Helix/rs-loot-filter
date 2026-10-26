@@ -158,6 +158,21 @@ rule (name:"Paddlefish") {
 	menuTextColor = "AAAA9E";
 }
 
+rule (name:"Corrupted * (basic)") {
+	color = "B0A6A2";
+	menuTextColor = "B0A6A2";
+}
+
+rule (name:"Corrupted * (attuned)") {
+	color = "A47DAB";
+	menuTextColor = "A47DAB";
+}
+
+rule (name:"Corrupted * (perfected)") {
+	color = "C24B3E";
+	menuTextColor = "C24B3E";
+}
+
 //RESOURCES
 
 #define RESOURCES ["Gryphon feather", "Uncut *", "Sapphire", "Emerald", "Ruby", "Diamond", "Dragonstone"]
