@@ -173,6 +173,11 @@ rule (name:"Corrupted * (perfected)") {
 	menuTextColor = "C24B3E";
 }
 
+rule (name:"Grym leaf") {
+	color = "354335";
+	menuTextColor = "354335";
+}
+
 //RESOURCES
 
 #define RESOURCES ["Gryphon feather", "Uncut *", "Sapphire", "Emerald", "Ruby", "Diamond", "Dragonstone"]
